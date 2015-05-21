@@ -27,10 +27,10 @@ extern "C" void __cxa_pure_virtual() {;}
 #include <RGBled.h>
 #include <SIM.cpp>
 #include <SIM.h>
-#include <biometric.cpp>
-#include <biometric.h>
 #include <buzzer.cpp>
 #include <buzzer.h>
+#include <devid.cpp>
+#include <devid.h>
 #include <lcd.cpp>
 #include <lcd.h>
 #include <memory.cpp>

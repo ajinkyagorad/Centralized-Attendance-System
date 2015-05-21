@@ -10,6 +10,8 @@
 #define WIZNET_H_
 
 #include <Ethernet.h>
+#include "devid.h"
+#include "time.h"
 
 extern  EthernetClient client;
 #define MAXLINES 20
@@ -32,7 +34,8 @@ class wiznet{
 		unsigned int getPort(void);
 		int processData();
 		String getDataNotSent();
-		
+		/*following  sets the startup settings from the server's response*/
+		void setStartupSettings();
 		/*
 		int checkData
 		String method	CHECK/REGISTER

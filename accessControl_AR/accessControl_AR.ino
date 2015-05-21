@@ -1,3 +1,4 @@
+#include <EEPROM.h>
 #include <Wire.h>
 #include <Fingerprint.h>
 #include <SD.h>
@@ -28,6 +29,7 @@
 #include "RGBled.h"
 #include "buzzer.h"
 #include "memory.h"
+#include "devid.h"
 /***********************/
 LCD lcd(22,23,24,25,26,27,28);
 wiznet ether;
@@ -36,6 +38,8 @@ DS1307 clock;
 RGBLED led(5,6,7);
 buzzer buzz(8);
 memory disk(4);		//chip select  for sd card
+timeClass timeManage;
+devClass dev;
 /*******************************/
 #ifndef SDrelease()
 #define SDrelease()	digitalWrite(4,HIGH)
@@ -46,7 +50,8 @@ memory disk(4);		//chip select  for sd card
 /*******************************************/
 unsigned long timeServerCheck;
 bool serverFailed;
-bool transmittedFiles;
+
+String MODE;
 void setup()
 {
 
@@ -59,20 +64,24 @@ void setup()
 	  ether.init();
 	  clock.begin();
 	  lcd.begin(16,2);
+	  
+	  Serial.println("dumping EEPROM");
+	 /* for(int i=0;i<64;i++)Serial.write(EEPROM.read(i));*/
 	  if(!disk.init())
 	  {
 		  Serial.println("unable to initialise SD card");
 	  }
+	  
 	  lcd.print("initialised");
 	  Serial.println("Initialised");
 	  lcd.home();lcd.print("connecting...");
 	  Serial.println("Waiting for connection..");
-	  if(ether.startup(60))
+	  
+	  if(ether.startup(60))		//startup with timeout
 	  {
 		  Serial.println("connected>>>");
 		  lcd.home();lcd.print("Connected   ");
-		  //after CONNECTING DO DEVICE ID AND PARSING s
-		  //add support for time adjustment
+		 
 		  serverFailed=false;
 	  }
 	  else 
@@ -81,6 +90,8 @@ void setup()
 		  Serial.println("Exiting...");
 		  lcd.home(); lcd.print("Error Connecting");
 		  serverFailed=true;
+		  //use default mode for checking
+		  dev.setDeviceMethod("CHECK");
 	  }
 	  timeServerCheck=millis();
 }
@@ -88,12 +99,8 @@ RFID::id rfid;
 
 void loop()
 {
-		//wait for first connection  is made :>
-		//loop {	
-		//if rfid is read , transmit a request;
-		//		if connection  problem print :connection problem
-		//look for response while client is connected.
-		//print response	}
+		
+		
 		
 		
 		SDrelease();

@@ -7,7 +7,8 @@
 
 #ifndef WIZNET_CPP_
 #define WIZNET_CPP_
-
+#include "time.h"
+#include "devid.h"
 #include "wiznet.h"
 //*******************************************
 //modify the Following accordingly:
@@ -96,6 +97,7 @@ bool wiznet::checkWaitConnect(unsigned int timeoutSeconds)
 }
 bool wiznet::startup(unsigned int timeoutSeconds)
 {
+
 	unsigned long time=millis();
 	int res=0;
 	if(checkWaitConnect(timeoutSeconds)==false)
@@ -104,31 +106,68 @@ bool wiznet::startup(unsigned int timeoutSeconds)
 		return false;
 	}
 	//else go 
-	while(	 (millis()-time) < timeoutSeconds*1000	)
+	//try few times so if it  fails first time
+	while(	(millis()-time) < timeoutSeconds*1000	)
 	{
 		res=client.connect( server,port);
 		if(res==1)
 		{
-			client.println("GET /startup.php	 HTTP/1.1");
+			client.print("GET /cas/startup.php?DEVID=");client.print(dev.getDeviceId());client.println(" HTTP/1.1");
 			client.print("Host: ");client.println(server);
-			client.println("Connection: Close");		//connection to keep alive
+			client.println("Connection: Close");		//connection to keep close
 			client.println();
 			while(client.connected() )
 			{
 				if(client.available())
 				{
 					response=client.readString();
-					Serial.println("@@@@@@@@@@@@@@@@@@");
+					/*Serial.println("=-=-=-=-=-=-=-=-=-");
 					Serial.println(response);
-					Serial.println("@@@@@@@@@@@@@@@@@@");
+					Serial.println("-=-=-=-=-=-=-=-=-=");*/
 				}
 			}
+			
 			break;
 		}
 	}
 	client.stop();
+	setStartupSettings();
 	if(res==1)return true;	//function succeded in connnecting before  timeout
 	else return false;		//function failed to connect before timeout
+
+}
+void wiznet::setStartupSettings()
+{
+	int  index=response.indexOf("DEVID=");
+	
+	if(index>=0)
+	{
+		String DEVID=response.substring(index+6,index+6+4);
+		dev.setDeviceId(DEVID);
+		Serial.println("!Device ID set to "+DEVID);
+	}
+	index=response.indexOf("METHOD=");
+	if(index>=0)
+	{
+		int CR_index=response.indexOf("\r",index);
+		String _method=response.substring(index+7,CR_index);
+		dev.setDeviceMethod(_method);
+	}
+	index=response.indexOf("TEXTLCD=");
+	if(index>=0)
+	{
+		int CR_index=response.indexOf("\r",index);
+		String _lcd_default=response.substring(index+8,CR_index);
+		dev.setLcdDefaultText(_lcd_default);
+	}
+	index=response.indexOf("DATETIME=");
+	if(index>=0)
+	{
+		int CR_index=response.indexOf("\r",index);
+		String _date_time=response.substring(index+9,CR_index);
+		Serial.println("date_TIME :"+_date_time);
+		timeManage.setDateTime_YmdHis(_date_time);
+	}
 }
 int wiznet::checkData(String method,String type,String uid,String devid, String time,String date,String lat,String lon)
 {
@@ -139,7 +178,7 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 		//if connected
 		//send get request with all flags
 		data="METHOD="+method+"&TYPE="+type+"&UID="+uid+"&DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon;
-		client.print("GET /usingphp.php?");client.print(data);client.println(" HTTP/1.1");
+		client.print("GET /cas/check.php?");client.print(data);client.println(" HTTP/1.1");
 		client.print("Host: ");client.println(server);
 		client.println("Connection: close");
 		client.println();	//empty line

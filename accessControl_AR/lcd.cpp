@@ -17,10 +17,10 @@ void LCD::displayDateTime()
 void LCD::displayDateTime(RTCDateTime dateTime)
 {
 	
-	setCursor(2,0);	
-	String date=String(dateTime.day)+"/"+String(dateTime.month)+"/"+String(dateTime.year);
+	setCursor(0,0);	
+	String date=String(dateTime.day)+"/"+String(dateTime.month)+"/"+String(dateTime.year%100);
 	print(date);
-	setCursor(2,1);
+	setCursor(8,0);
 	String time=String(dateTime.hour)+":"+String(dateTime.minute)+":"+String(dateTime.second);
 	print(time);
 }

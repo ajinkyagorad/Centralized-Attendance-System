@@ -9,7 +9,11 @@
 #ifndef TIME_H_
 #define TIME_H_
 #include <DS1307.h>
+extern DS1307 clock;
+class timeClass{
+	public:
+		void setDateTime_YmdHis(String fDateTime);
+};
 
-
-
+extern timeClass timeManage;
 #endif /* TIME_H_ */
