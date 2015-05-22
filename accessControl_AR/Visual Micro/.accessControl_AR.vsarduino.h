@@ -21,6 +21,8 @@ extern "C" void __cxa_pure_virtual() {;}
 #include "C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\mega\pins_arduino.h" 
 #include "C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\arduino.h"
 #include <accessControl_AR.ino>
+#include <GPS_NMEA.cpp>
+#include <GPS_NMEA.h>
 #include <RFID.cpp>
 #include <RFID.h>
 #include <RGBled.cpp>

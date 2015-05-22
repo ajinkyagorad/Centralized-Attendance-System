@@ -13,6 +13,7 @@ extern DS1307 clock;
 class timeClass{
 	public:
 		void setDateTime_YmdHis(String fDateTime);
+		void getDateTimeStr(String& date, String& time);
 };
 
 extern timeClass timeManage;

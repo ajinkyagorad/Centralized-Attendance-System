@@ -30,6 +30,7 @@
 #include "buzzer.h"
 #include "memory.h"
 #include "devid.h"
+#include "GPS_NMEA.h"
 /***********************/
 LCD lcd(22,23,24,25,26,27,28);
 wiznet ether;
@@ -40,6 +41,7 @@ buzzer buzz(8);
 memory disk(4);		//chip select  for sd card
 timeClass timeManage;
 devClass dev;
+GPSClass gps;
 /*******************************/
 #ifndef SDrelease()
 #define SDrelease()	digitalWrite(4,HIGH)
@@ -50,7 +52,7 @@ devClass dev;
 /*******************************************/
 unsigned long timeServerCheck;
 bool serverFailed;
-
+position location;
 String MODE;
 void setup()
 {
@@ -62,10 +64,17 @@ void setup()
 	  SDrelease();
 	  RFID::init();
 	  ether.init();
+	  gps.init();
 	  clock.begin();
 	  lcd.begin(16,2);
 	  
-	  Serial.println("dumping EEPROM");
+	  while(1)
+	  {
+		  
+	  }
+	  
+	  Serial.println("dumping GPS");
+	 
 	 /* for(int i=0;i<64;i++)Serial.write(EEPROM.read(i));*/
 	  if(!disk.init())
 	  {
@@ -105,13 +114,16 @@ void loop()
 		
 		SDrelease();
 		RFID::getID(rfid);		//instead a function to get any ID and type
-		
+		gps.getLatLon(location);
 		if(rfid.isValid==true)	// if a valid id
 		{
 			buzz.swipe();		//beep buzzer for swipe/thumb successful impression
 			
 			//following  with ethernet
-			if(ether.checkData("CHECK","RFID",rfid.buf,"1","NULL","NULL","NULL","NULL")>0)	//function to send data for checking/ receiving and look for its response
+			//get date time
+			String  date,time;
+			timeManage.getDateTimeStr(date,time);
+			if(ether.checkData("CHECK","RFID",rfid.buf,"1","NULL","NULL",location.lat,location.lon)>0)	//function to send data for checking/ receiving and look for its response
 			{
 				//process received data
 				//if data for checking : 
