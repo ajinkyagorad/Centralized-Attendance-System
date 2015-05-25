@@ -10,6 +10,8 @@
 #include "time.h"
 #include "devid.h"
 #include "wiznet.h"
+#include <string.h>
+#include <MemoryFree.h>
 //*******************************************
 //modify the Following accordingly:
 
@@ -90,6 +92,8 @@ bool wiznet::checkWaitConnect(unsigned int timeoutSeconds)
 	while(res!=1 && (	 (millis()-time) < timeoutSeconds*1000	) )	
 	{
 		res=client.connect( server,port);
+		Serial.print("**free MEMEORY :");
+		Serial.println(freeMemory(),DEC);
 	}
 	client.stop();
 	if(res==1)return true;	//function succeded in connnecting before  timeout
@@ -120,10 +124,11 @@ bool wiznet::startup(unsigned int timeoutSeconds)
 			{
 				if(client.available())
 				{
-					response=client.readString();
+					client.readBytesUntil(0x00,response,1024);
 					/*Serial.println("=-=-=-=-=-=-=-=-=-");
 					Serial.println(response);
 					Serial.println("-=-=-=-=-=-=-=-=-=");*/
+					//response="NULL";
 				}
 			}
 			
@@ -131,22 +136,25 @@ bool wiznet::startup(unsigned int timeoutSeconds)
 		}
 	}
 	client.stop();
-	setStartupSettings();
+	//setStartupSettings();
 	if(res==1)return true;	//function succeded in connnecting before  timeout
 	else return false;		//function failed to connect before timeout
 
 }
+/*
+
 void wiznet::setStartupSettings()
 {
+	
 	int  index=response.indexOf("DEVID=");
 	
 	if(index>=0)
 	{
 		String DEVID=response.substring(index+6,index+6+4);
 		dev.setDeviceId(DEVID);
-		Serial.println("!Device ID set to "+DEVID);
+		Serial.print(F("!Device ID set to "));Serial.println(DEVID);
 	}
-	index=response.indexOf("METHOD=");
+	index=response.indexOf(F("METHOD="));
 	if(index>=0)
 	{
 		int CR_index=response.indexOf("\r",index);
@@ -160,15 +168,15 @@ void wiznet::setStartupSettings()
 		String _lcd_default=response.substring(index+8,CR_index);
 		dev.setLcdDefaultText(_lcd_default);
 	}
-	index=response.indexOf("DATETIME=");
+	index=response.indexOf(F("DATETIME="));
 	if(index>=0)
 	{
 		int CR_index=response.indexOf("\r",index);
 		String _date_time=response.substring(index+9,CR_index);
-		Serial.println("date_TIME :"+_date_time);
+		Serial.print(F("date_TIME :"));Serial.println(_date_time);
 		timeManage.setDateTime_YmdHis(_date_time);
 	}
-}
+}*/
 int wiznet::checkData(String method,String type,String uid,String devid, String time,String date,String lat,String lon)
 {
 	String data;
@@ -177,10 +185,40 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 	{
 		//if connected
 		//send get request with all flags
-		data="METHOD="+method+"&TYPE="+type+"&UID="+uid+"&DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon;
-		client.print("GET /cas/check.php?");client.print(data);client.println(" HTTP/1.1");
-		client.print("Host: ");client.println(server);
-		client.println("Connection: close");
+		//data="METHOD="+method+"&TYPE="+type+"&UID="+uid+"&DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon;
+		
+		data="METHOD=";
+		data=data+method;
+		data=data+"&DEVID=";
+		data=data+devid;
+		data=data+"&TYPE=";
+		data=data+type;
+		data=data+"&UID=";
+		data=data+uid;
+		data=data+"&TIME=";
+		data=data+time;
+		data=data+"&DATE=";
+		data=data+date;
+		data=data+"&LAT=";
+		data=data+lat;
+		data=data+"&LON=";
+		data=data+lon;
+		/*Serial.println(data);
+		char buf[100];
+		for(int i=0;i<data.length();i++)
+		{
+			buf[i]=data.charAt(i);
+			if(i>=100)
+			{
+				buf[100]=0;
+			}
+		}*/
+		client.print(F("GET /cas/check.php?"));
+		//client.print("&METHOD="+method+"&TYPE="+type+"&UID="+uid+"DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon);
+		client.print(data);
+		client.println(F(" HTTP/1.1"));
+		client.print(F("Host: "));client.println(server);
+		client.println(F("Connection: close"));
 		client.println();	//empty line
 		
 		while(client.connected() )		
@@ -188,18 +226,20 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 			if(client.available())
 			{
 				
-				response=client.readString();
+				//response=client.readString();
+				client.readBytesUntil('\r',response,1024);
+				//response="NULL";
 				
 			}
 		}
-		
 		client.stop();
+		client.flush();
 		return 1;
 	}
 	else
 	{
 		//unable to connect
-		dataNotSent=data;
+		//dataNotSent=data;
 		return -1;	//return -1  for communication error
 		
 	}
@@ -207,21 +247,24 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 
 int  wiznet::processData()
 {
-	Serial.println("######################");
+	
+	Serial.println(F("######################"));
 	Serial.println(response);
-	Serial.println("######################");
-	if(response.indexOf("NOT FOUND")>0)
+	//int res = response.indexOf(F("NOT FOUND"));
+	char * loc=strstr(response,"NOT FOUND");
+	Serial.println(freeMemory(),DEC);
+	if(loc==NULL)
 	{
-		return 0;
+		return 1;
 	}
 	else
 	{
-		return 1;
+		return 0;
 	}
 }
 
 String wiznet::getDataNotSent()
 {
-	return  dataNotSent;
+	return  "NULL";
 }
 #endif

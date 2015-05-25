@@ -33,10 +33,12 @@ extern "C" void __cxa_pure_virtual() {;}
 #include <buzzer.h>
 #include <devid.cpp>
 #include <devid.h>
+#include <fingerprint.cpp>
+#include <fingerprint.h>
+#include <id.cpp>
+#include <id.h>
 #include <lcd.cpp>
 #include <lcd.h>
-#include <memory.cpp>
-#include <memory.h>
 #include <time.cpp>
 #include <time.h>
 #include <wiznet.cpp>

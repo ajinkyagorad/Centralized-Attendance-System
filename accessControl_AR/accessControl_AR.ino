@@ -1,7 +1,8 @@
+#include <MemoryFree.h>
+#include <Adafruit_Fingerprint.h>
 #include <EEPROM.h>
 #include <Wire.h>
-#include <Fingerprint.h>
-#include <SD.h>
+//#include <SD.h>
 #include <GSM.h>
 #include <LiquidCrystal.h>
 #include <SPI.h>
@@ -22,15 +23,17 @@
 		SDrelease() releases SD bus;
 		ETrelease() releases ETh bus
  */ 
-#include "RFID.h"
 #include "wiznet.h"
 #include "time.h"
 #include "lcd.h"
 #include "RGBled.h"
 #include "buzzer.h"
-#include "memory.h"
+//#include "memory.h"
 #include "devid.h"
 #include "GPS_NMEA.h"
+#include "id.h"
+#include "RFID.h"
+#include "fingerprint.h"
 /***********************/
 LCD lcd(22,23,24,25,26,27,28);
 wiznet ether;
@@ -38,10 +41,13 @@ EthernetClient client;
 DS1307 clock;
 RGBLED led(5,6,7);
 buzzer buzz(8);
-memory disk(4);		//chip select  for sd card
+//memory disk(4);		//chip select  for sd card
 timeClass timeManage;
 devClass dev;
 GPSClass gps;
+fingerPrintClass finger(Serial1);
+idClass userID;
+RFIDClass rfid;
 /*******************************/
 #ifndef SDrelease()
 #define SDrelease()	digitalWrite(4,HIGH)
@@ -57,37 +63,42 @@ String MODE;
 void setup()
 {
 
+		
 	  /* add setup code here, setup code runs once when the processor starts */
 	  pinMode(10,OUTPUT);	//for ethernet
 	  pinMode(4,OUTPUT);	//for SD 
+	  pinMode(53,OUTPUT);
 	  Serial.begin(9600);
+	  delay(200);
 	  SDrelease();
-	  RFID::init();
+	  if(userID.init("FINGERPRINT"))
+	  {
+		  Serial.println("Sensor FOUND");
+	  }
+	  else Serial.println("Sensor NOT FOUND");
+	  Serial.print("free MEMEORY :");
+	  Serial.println(freeMemory(),DEC);
 	  ether.init();
 	  gps.init();
 	  clock.begin();
 	  lcd.begin(16,2);
 	  
-	  while(1)
-	  {
-		  
-	  }
-	  
-	  Serial.println("dumping GPS");
-	 
+	// Serial.println("free Ram ini:"+freeMemory());
 	 /* for(int i=0;i<64;i++)Serial.write(EEPROM.read(i));*/
-	  if(!disk.init())
-	  {
-		  Serial.println("unable to initialise SD card");
-	  }
+	
 	  
+
 	  lcd.print("initialised");
 	  Serial.println("Initialised");
 	  lcd.home();lcd.print("connecting...");
 	  Serial.println("Waiting for connection..");
+	  Serial.print("**free MEMEORY :");
+	  Serial.println(freeMemory(),DEC);
 	  
-	  if(ether.startup(60))		//startup with timeout
+	  if(ether.startup(2))		//startup with timeout
 	  {
+		  Serial.print("**free MEMEORY :");
+		  Serial.println(freeMemory(),DEC);
 		  Serial.println("connected>>>");
 		  lcd.home();lcd.print("Connected   ");
 		 
@@ -95,6 +106,8 @@ void setup()
 	  }
 	  else 
 	  {
+		  Serial.print("**free MEMEORY :");
+		  Serial.println(freeMemory(),DEC);
 		  Serial.println("Error Connecting");
 		  Serial.println("Exiting...");
 		  lcd.home(); lcd.print("Error Connecting");
@@ -102,20 +115,31 @@ void setup()
 		  //use default mode for checking
 		  dev.setDeviceMethod("CHECK");
 	  }
+	  
+	  
+	//  Serial.println("free Ram :"+freeMemory());
+	  
+	  
+	  Serial.print("free MEMEORY :");
+	  Serial.println(freeMemory(),DEC);
 	  timeServerCheck=millis();
+	  
 }
-RFID::id rfid;
 
+uid userid;
 void loop()
 {
 		
 		
 		
-		
+		Serial.print("**free MEMORY :");
+		Serial.println(freeMemory(),DEC);
 		SDrelease();
-		RFID::getID(rfid);		//instead a function to get any ID and type
+		userid.isValid=false;
+		userID.getID(userid);	//instead a function to get any ID and type
+	//	Serial.println("free Ram :"+freeMemory());
 		gps.getLatLon(location);
-		if(rfid.isValid==true)	// if a valid id
+		if(userid.isValid==true)	// if a valid id
 		{
 			buzz.swipe();		//beep buzzer for swipe/thumb successful impression
 			
@@ -123,7 +147,7 @@ void loop()
 			//get date time
 			String  date,time;
 			timeManage.getDateTimeStr(date,time);
-			if(ether.checkData("CHECK","RFID",rfid.buf,"1","NULL","NULL",location.lat,location.lon)>0)	//function to send data for checking/ receiving and look for its response
+			if(ether.checkData(dev.getDeviceMethod(),userid.type,userid.id,dev.getDeviceId(),time,date,location.lat,location.lon)>0)	//function to send data for checking/ receiving and look for its response
 			{
 				//process received data
 				//if data for checking : 
@@ -158,7 +182,7 @@ void loop()
 				lcd.print("Error");
 				led.communicationError();
 				buzz.communicationError();
-				disk.saveData(ether.getDataNotSent());	//save data on sd card
+				//disk.saveData(ether.getDataNotSent());	//save data on sd card
 			}
 			delay(1000);	// for beep and lcd persistence of message
 		}
@@ -170,15 +194,15 @@ void loop()
 			lcd.displayDateTime();
 		}
 		
-		//try after every 60 seconds if the server is available and send data if 
+	/*	//try after every 60 seconds if the server is available and send data if 
 		if(millis()-timeServerCheck>60000 && serverFailed)// if time from last was greater than 60sec and serverFailed to connect
 		{
 			timeServerCheck=millis();// save current time for next check
-			/*** CHECK  connection status
+			/ *** CHECK  connection status
 				 //if able to connect  
 					// check and transmit any pending files
 						//if all files transmitted
 				// if not connect set serverFailed
-				*/
-		}
+				* /
+		}*/
 }

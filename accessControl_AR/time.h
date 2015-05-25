@@ -14,6 +14,7 @@ class timeClass{
 	public:
 		void setDateTime_YmdHis(String fDateTime);
 		void getDateTimeStr(String& date, String& time);
+		void getDateTimeStr(char* date,char* time);
 };
 
 extern timeClass timeManage;

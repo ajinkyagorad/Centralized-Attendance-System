@@ -16,11 +16,12 @@
 extern  EthernetClient client;
 #define MAXLINES 20
 class wiznet{
-	String METHOD,TYPE,UID,DEVID,TIME,DATE,LAT,LON;
+	
 	IPAddress server;
 	unsigned int port;
-	String response;
-	String dataNotSent;
+	//String response;
+	char response[1024];
+	
 	public:
 		
 		bool init();

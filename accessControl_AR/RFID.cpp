@@ -11,36 +11,37 @@
 
 #include "RFID.h"
 
-bool RFID::init(void)
+bool RFIDClass::init(void)
 {
 	
 	return true;	//no initialisation sequence for RFID
 	
 }
 
-bool RFID::getID(id& rfid)
+void RFIDClass::_getID(uid& rfid)
 {
+	
+	rfid.type="RFID";
 	Serial1.begin(9600);
 	Serial1.setTimeout(20);	//set  delay between timeout
-	int bytesRead=Serial1.readBytes(rfid.buf,12);
-	rfid.buf[13]=0;	//append 0 for string
-	
-	if(bytesRead==12)
+// 	int bytesRead=Serial1.readBytes(rfid.buf,12);
+// 	rfid.buf[13]=0;	//append 0 for string
+	rfid.id=Serial1.readString();
+	if(rfid.id.length()==12)
 	{
 		rfid.isValid=true;
 		Serial.println("****************");
 		Serial.println("RFID: ");
-		Serial.print("\tBytes Read : ");Serial.println(bytesRead);
-		Serial.print("\tID : ");Serial.println(rfid.buf);
+		Serial.print("\tBytes Read : ");Serial.println(rfid.id.length());
+		Serial.print("\tID : ");Serial.println(rfid.id);
 		Serial.println("****************");
-		return true;
+		rfid.isValid=true;
 	}
-	else
-	{
+	else{
 		rfid.isValid=false;
-		//Serial.println("rfid Read Timeout");
-		return false;
 	}
+	
+	
 	
 }
 

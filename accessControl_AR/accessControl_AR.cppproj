@@ -48,28 +48,115 @@
   <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
   <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.symbols.DefSymbols><ListValues><Value>__AVR_ATmega2560__</Value><Value>ARDUINO=161</Value><Value>ARDUINO_MAIN</Value><Value>F_CPU=16000000L</Value><Value>__AVR__</Value></ListValues></avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.directories.IncludePaths><ListValues><Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries</Value><Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value><Value>C:/Program Files (x86)/Arduino/libraries</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307</Value><Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value><Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value><Value>C:/Program Files (x86)/Arduino/libraries/SD/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/SD/src</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM</Value><Value>../../accessControl_AR</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value></ListValues></avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=161</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree</Value>
+      <Value>../../accessControl_AR</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
   <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.UseShortCalls>True</avrgcc.compiler.optimization.UseShortCalls>
   <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
   <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
   <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcccpp.compiler.symbols.DefSymbols><ListValues><Value>__AVR_ATmega2560__</Value><Value>ARDUINO=161</Value><Value>ARDUINO_MAIN</Value><Value>F_CPU=16000000L</Value><Value>__AVR__</Value></ListValues></avrgcccpp.compiler.symbols.DefSymbols>
-  <avrgcccpp.compiler.directories.IncludePaths><ListValues><Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries</Value><Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value><Value>C:/Program Files (x86)/Arduino/libraries</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307</Value><Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value><Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value><Value>C:/Program Files (x86)/Arduino/libraries/SD/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/SD/src</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM</Value><Value>../../accessControl_AR</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value></ListValues></avrgcccpp.compiler.directories.IncludePaths>
-  <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=161</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree</Value>
+      <Value>../../accessControl_AR</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
   <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.UseShortCalls>True</avrgcccpp.compiler.optimization.UseShortCalls>
   <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
   <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
-  <avrgcccpp.linker.libraries.Libraries><ListValues><Value>libm</Value></ListValues></avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
   <avrgcccpp.linker.miscellaneous.LinkerFlags>-Wl  -lcore   -Wl  -lm</avrgcccpp.linker.miscellaneous.LinkerFlags>
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;../../accessControl_AR;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Ajinkya/Documents/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Program Files (x86)/Arduino/libraries/GSM/src;C:/Program Files (x86)/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;{runtime.tools.avr-gcc.path}/avr/include/;{runtime.tools.avr-gcc.path}//avr/include/avr/;{runtime.tools.avr-gcc.path}/lib/gcc/avr/4.8.1/include;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/SD/src;C:/Program Files (x86)/Arduino/libraries/SD/src/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;../../accessControl_AR;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Ajinkya/Documents/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Program Files (x86)/Arduino/libraries/GSM/src;C:/Program Files (x86)/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;{runtime.tools.avr-gcc.path}/avr/include/;{runtime.tools.avr-gcc.path}//avr/include/avr/;{runtime.tools.avr-gcc.path}/lib/gcc/avr/4.8.1/include;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/SD/src;C:/Program Files (x86)/Arduino/libraries/SD/src/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>mega_atmega2560</arduino.board.name>
@@ -260,8 +347,48 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
   <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
   <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.symbols.DefSymbols><ListValues><Value>__AVR_ATmega2560__</Value><Value>ARDUINO=161</Value><Value>ARDUINO_MAIN</Value><Value>F_CPU=16000000L</Value><Value>__AVR__</Value></ListValues></avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.directories.IncludePaths><ListValues><Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries</Value><Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value><Value>C:/Program Files (x86)/Arduino/libraries</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307</Value><Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value><Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value><Value>C:/Program Files (x86)/Arduino/libraries/SD/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/SD/src</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM</Value><Value>../../accessControl_AR</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value></ListValues></avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=161</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree</Value>
+      <Value>../../accessControl_AR</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
   <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
@@ -269,19 +396,63 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
   <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
   <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcccpp.compiler.symbols.DefSymbols><ListValues><Value>__AVR_ATmega2560__</Value><Value>ARDUINO=161</Value><Value>ARDUINO_MAIN</Value><Value>F_CPU=16000000L</Value><Value>__AVR__</Value></ListValues></avrgcccpp.compiler.symbols.DefSymbols>
-  <avrgcccpp.compiler.directories.IncludePaths><ListValues><Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value><Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries</Value><Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value><Value>C:/Program Files (x86)/Arduino/libraries</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307</Value><Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value><Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value><Value>C:/Program Files (x86)/Arduino/libraries/SD/src/utility</Value><Value>C:/Program Files (x86)/Arduino/libraries/SD/src</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility</Value><Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM</Value><Value>../../accessControl_AR</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega</Value><Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value></ListValues></avrgcccpp.compiler.directories.IncludePaths>
-  <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=161</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/Ethernet/src</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility</Value>
+      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree</Value>
+      <Value>../../accessControl_AR</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
   <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.UseShortCalls>True</avrgcccpp.compiler.optimization.UseShortCalls>
   <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
   <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
-  <avrgcccpp.linker.libraries.Libraries><ListValues><Value>libm</Value></ListValues></avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
   <avrgcccpp.linker.miscellaneous.LinkerFlags>-Wl  -lcore   -Wl  -lm</avrgcccpp.linker.miscellaneous.LinkerFlags>
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;../../accessControl_AR;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Ajinkya/Documents/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Program Files (x86)/Arduino/libraries/GSM/src;C:/Program Files (x86)/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;{runtime.tools.avr-gcc.path}/avr/include/;{runtime.tools.avr-gcc.path}//avr/include/avr/;{runtime.tools.avr-gcc.path}/lib/gcc/avr/4.8.1/include;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/SD/src;C:/Program Files (x86)/Arduino/libraries/SD/src/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;../../accessControl_AR;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Ajinkya/Documents/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Program Files (x86)/Arduino/libraries/GSM/src;C:/Program Files (x86)/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;{runtime.tools.avr-gcc.path}/avr/include/;{runtime.tools.avr-gcc.path}//avr/include/avr/;{runtime.tools.avr-gcc.path}/lib/gcc/avr/4.8.1/include;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/SD/src;C:/Program Files (x86)/Arduino/libraries/SD/src/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>mega_atmega2560</arduino.board.name>
@@ -466,6 +637,635 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
     <CleanTarget>clean</CleanTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\abi.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\abi.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Arduino.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Arduino.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\binary.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\binary.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\CDC.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\CDC.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Client.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Client.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HardwareSerial.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HardwareSerial.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial0.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HardwareSerial0.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial1.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HardwareSerial1.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial2.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HardwareSerial2.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial3.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HardwareSerial3.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial_private.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HardwareSerial_private.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\HID.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HID.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\hooks.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\hooks.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\IPAddress.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\IPAddress.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\IPAddress.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\IPAddress.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\main.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\main.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\new.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\new.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\new.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\new.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Print.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Print.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Print.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Print.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Printable.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Printable.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Server.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Server.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Stream.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Stream.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Stream.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Stream.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Tone.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Tone.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\Udp.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Udp.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\USBAPI.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\USBAPI.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\USBCore.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\USBCore.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\USBCore.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\USBCore.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\USBDesc.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\USBDesc.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\WCharacter.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WCharacter.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\WInterrupts.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WInterrupts.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\wiring.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\wiring_analog.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_analog.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\wiring_digital.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_digital.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\wiring_private.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_private.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\wiring_pulse.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_pulse.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\wiring_shift.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_shift.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\WMath.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WMath.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\WString.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WString.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\cores\arduino\WString.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WString.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\libraries\EEPROM\EEPROM.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\EEPROM\EEPROM.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\libraries\EEPROM\EEPROM.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\EEPROM\EEPROM.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\libraries\SPI\SPI.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SPI\SPI.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\libraries\SPI\SPI.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SPI\SPI.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\libraries\Wire\utility\twi.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\utility\twi.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\libraries\Wire\utility\twi.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\utility\twi.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\libraries\Wire\Wire.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\Wire.cpp</Link>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'Debug'"> -I"C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\utility"</CustomCompilationSetting>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\libraries\Wire\Wire.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\Wire.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\hardware\arduino\avr\variants\mega\pins_arduino.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\variants\mega\pins_arduino.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\Dhcp.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\Dhcp.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\Dhcp.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\Dhcp.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\Dns.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\Dns.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\Dns.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\Dns.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\Ethernet.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\Ethernet.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\Ethernet.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\Ethernet.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\EthernetClient.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\EthernetClient.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\EthernetClient.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\EthernetClient.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\EthernetServer.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\EthernetServer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\EthernetServer.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\EthernetServer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\EthernetUdp.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\EthernetUdp.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\EthernetUdp.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\EthernetUdp.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\utility\socket.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\utility\socket.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\utility\socket.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\utility\socket.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\utility\util.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\utility\util.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\utility\w5100.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\utility\w5100.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\Ethernet\src\utility\w5100.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Ethernet\src\utility\w5100.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\LiquidCrystal\src\LiquidCrystal.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\LiquidCrystal\src\LiquidCrystal.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\File.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\File.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\SD.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\SD.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\SD.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\SD.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\FatStructs.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\FatStructs.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\Sd2Card.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\Sd2Card.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\Sd2Card.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\Sd2Card.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\Sd2PinMap.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\Sd2PinMap.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\SdFat.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\SdFat.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\SdFatmainpage.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\SdFatmainpage.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\SdFatUtil.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\SdFatUtil.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\SdFile.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\SdFile.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\SdInfo.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\SdInfo.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\Program Files %28x86%29\Arduino\libraries\SD\src\utility\SdVolume.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\SD\src\utility\SdVolume.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\Adafruit_Fingerprint\Adafruit_Fingerprint.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Adafruit_Fingerprint\Adafruit_Fingerprint.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\Adafruit_Fingerprint\Adafruit_Fingerprint.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Adafruit_Fingerprint\Adafruit_Fingerprint.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\DS1307\DS1307.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\DS1307\DS1307.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\DS1307\DS1307.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\DS1307\DS1307.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3CircularBuffer.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3CircularBuffer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3CircularBuffer.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3CircularBuffer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3IO.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3IO.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileAccessProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileAccessProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileAccessProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileAccessProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileCellManagement.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileCellManagement.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileCellManagement.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileCellManagement.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileClientProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileClientProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileClientProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileClientProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileClientService.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileClientService.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileClientService.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileClientService.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileDataNetworkProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileDataNetworkProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileDataNetworkProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileDataNetworkProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileMockupProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileMockupProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileMockupProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileMockupProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileNetworkProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileNetworkProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileNetworkProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileNetworkProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileNetworkRegistry.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileNetworkRegistry.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileNetworkRegistry.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileNetworkRegistry.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileServerProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileServerProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileServerProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileServerProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileServerService.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileServerService.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileServerService.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileServerService.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileSMSProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileSMSProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileSMSProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileSMSProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileVoiceProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileVoiceProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3MobileVoiceProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3MobileVoiceProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1AccessProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1AccessProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1AccessProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1AccessProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1BandManagement.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1BandManagement.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1BandManagement.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1BandManagement.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1BaseProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1BaseProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1BaseProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1BaseProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1CellManagement.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1CellManagement.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1CellManagement.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1CellManagement.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ClientProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ClientProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ClientProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ClientProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1DataNetworkProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1DataNetworkProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1DataNetworkProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1DataNetworkProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1DirectModemProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1DirectModemProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1DirectModemProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1DirectModemProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ModemCore.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ModemCore.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ModemCore.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ModemCore.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ModemVerification.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ModemVerification.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ModemVerification.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ModemVerification.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1MultiClientProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1MultiClientProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1MultiClientProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1MultiClientProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1MultiServerProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1MultiServerProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1MultiServerProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1MultiServerProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1PinManagement.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1PinManagement.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1PinManagement.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1PinManagement.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ScanNetworks.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ScanNetworks.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ScanNetworks.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ScanNetworks.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ServerProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ServerProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1ServerProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1ServerProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1SMSProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1SMSProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1SMSProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1SMSProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1VoiceProvider.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1VoiceProvider.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3ShieldV1VoiceProvider.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3ShieldV1VoiceProvider.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3SMSService.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3SMSService.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3SMSService.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3SMSService.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3SoftSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3SoftSerial.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3SoftSerial.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3SoftSerial.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3VoiceCallService.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3VoiceCallService.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM3VoiceCallService.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3VoiceCallService.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\MemoryFree\MemoryFree.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\MemoryFree\MemoryFree.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\MemoryFree\MemoryFree.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\MemoryFree\MemoryFree.h</Link>
+    </Compile>
     <Compile Include="accessControl_AR.ino">
       <SubType>compile</SubType>
     </Compile>
@@ -481,16 +1281,28 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
     <Compile Include="devid.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="fingerprint.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="fingerprint.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GPS_NMEA.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GPS_NMEA.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="id.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="id.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="lcd.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="lcd.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="memory.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="memory.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="RFID.cpp">
@@ -528,6 +1340,29 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\sketch-api-readonly\" />
+    <Folder Include="src\sketch-api-readonly\core\" />
+    <Folder Include="src\sketch-api-readonly\libraries\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Adafruit_Fingerprint\" />
+    <Folder Include="src\sketch-api-readonly\libraries\DS1307\" />
+    <Folder Include="src\sketch-api-readonly\libraries\EEPROM\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Ethernet\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Ethernet\src\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Ethernet\src\utility\" />
+    <Folder Include="src\sketch-api-readonly\libraries\GSM\" />
+    <Folder Include="src\sketch-api-readonly\libraries\GSM\src\" />
+    <Folder Include="src\sketch-api-readonly\libraries\LiquidCrystal\" />
+    <Folder Include="src\sketch-api-readonly\libraries\LiquidCrystal\src\" />
+    <Folder Include="src\sketch-api-readonly\libraries\MemoryFree\" />
+    <Folder Include="src\sketch-api-readonly\libraries\SD\" />
+    <Folder Include="src\sketch-api-readonly\libraries\SD\src\" />
+    <Folder Include="src\sketch-api-readonly\libraries\SD\src\utility\" />
+    <Folder Include="src\sketch-api-readonly\libraries\SPI\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Wire\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Wire\utility\" />
+    <Folder Include="src\sketch-api-readonly\variants\" />
+    <Folder Include="src\sketch-api-readonly\variants\mega\" />
     <Folder Include="Visual Micro\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />

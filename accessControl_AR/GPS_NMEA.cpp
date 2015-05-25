@@ -79,9 +79,9 @@ bool GPSClass::update(unsigned long timeout_ms)
 				}
 				//make lattitude and longitude proper
 				lastPosition.lat	=	String(lastPosition.lat.substring(0,2).toFloat()
-									+	lastPosition.lat.substring(2,9).toFloat()/60,6)+" "+lastPosition.lat.substring(10,11);
+									+	lastPosition.lat.substring(2,9).toFloat()/60,6)+lastPosition.lat.substring(10,11);
 				lastPosition.lon	=	String(lastPosition.lon.substring(0,3).toFloat()
-									+	lastPosition.lon.substring(3,10).toFloat()/60,6)+" "+lastPosition.lon.substring(11,12);
+									+	lastPosition.lon.substring(3,10).toFloat()/60,6)+lastPosition.lon.substring(11,12);
 									
 								
 				

@@ -29,14 +29,24 @@ void timeClass::setDateTime_YmdHis(String fDateTime)
 	Serial.println("!Date & Time Set");
 }
 
+void timeClass::getDateTimeStr(char* date, char* time)
+{
+	//returns date  in  DD/MM/SS format
+	//return  time  in  hh:mm:ss format
+	RTCDateTime t=clock.getDateTime();
+	
+	
+	
+}
+
 void timeClass::getDateTimeStr(String& date, String& time)
 {
 	//returns date  in  DD/MM/SS format
 	//return  time  in  hh:mm:ss format
 	RTCDateTime t=clock.getDateTime();
 	
-	date = String(t.day,DEC)+"/"+String(t.month,DEC)+"/"+String(t.year,DEC);
-	time = String(t.hour,DEC)+":"+String(t.minute,DEC)+":"+String(t.second,DEC);
+	date = String(t.day,DEC)+"."+String(t.month,DEC)+"."+String(t.year,DEC);
+	time = String(t.hour,DEC)+"."+String(t.minute,DEC)+"."+String(t.second,DEC);
 	
 }
 

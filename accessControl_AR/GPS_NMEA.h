@@ -9,6 +9,8 @@
 #ifndef GPS_NMEA_H_
 #define GPS_NMEA_H_
 #include "Arduino.h"
+
+//uses  Serial3
 struct position
 {
 	String lat;
@@ -21,7 +23,7 @@ class GPSClass {
 		//getLattitude and Longitude
 		GPSClass();
 		bool init(void);
-		void getLatLon(position & pos, unsigned long timeout_ms=2000);
+		void getLatLon(position & pos, unsigned long timeout_ms=200);
 		bool update(unsigned long timeout_ms);
 		void getLastLatLon(position pos);
 		

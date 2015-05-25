@@ -8,14 +8,14 @@
 #include <arduino.h>
 #ifndef RFID_H_
 #define RFID_H_
+#include "id.h"
 //uses Serial1
-namespace RFID{
-	struct id{
-		char buf[13];
-		bool isValid;
-		};
-	bool init(void);
-	bool getID(id& rfid);
+struct uid;
+class RFIDClass{
+	
+	public:
+		bool init(void);
+		void _getID(uid& rfid);
 	
 };
 

@@ -9,7 +9,7 @@
 #ifndef MEMORY_H_
 #define MEMORY_H_
 
-#include <SD.h>
+//#include <SD.h>
 #ifndef SDrelease()	
 #define SDrelease()	digitalWrite(4,HIGH)
 #endif
