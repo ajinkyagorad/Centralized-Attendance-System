@@ -12,15 +12,16 @@
 #include <Ethernet.h>
 #include "devid.h"
 #include "time.h"
-
+#include "string.h"
+#include "stdlib.h"
+struct uid;
 extern  EthernetClient client;
-#define MAXLINES 20
 class wiznet{
 	
 	IPAddress server;
 	unsigned int port;
-	String response;
-	//char response[1024];
+	//String response;
+	char response[1024];
 	
 	public:
 		
@@ -34,9 +35,9 @@ class wiznet{
 		void setPort(unsigned int p);
 		unsigned int getPort(void);
 		int processData();
-		String getDataNotSent();
+		
 		/*following  sets the startup settings from the server's response*/
-		void setStartupSettings();
+		
 		/*
 		int checkData
 		String method	CHECK/REGISTER
@@ -61,6 +62,16 @@ class wiznet{
 		
 		
 		*/
+		
+		int checkData(	uint8_t method /*CHECK/REGISTER*/,
+						uid& userid,
+						uint16_t devid, /*DEVICE ID*/
+						uint32_t time,	/*TIME<HHMMSS> */
+						uint32_t date,	/*DATE<DDMMYY>*/
+						uint32_t lat,		/*LATTITUDE*/
+						uint32_t lon		/*LONGITUDE*/
+						);
+		
 		int checkData(	String method /*CHECK/REGISTER*/,
 						String type /*RFID/FINGERPRINT*/,
 						String uid, /*USER ID FOR <TYPE>*/

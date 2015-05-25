@@ -16,7 +16,7 @@
 //modify the Following accordingly:
 
 /*MAC ADDRESS OF THE ETHERNET SHIELD*/
-byte mac[]={0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+ byte mac[] ={0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
 /*IP Address of this Device : Default IP Address if DHCP Fails */
 IPAddress ip(10,3,192,177);
@@ -44,20 +44,20 @@ bool wiznet::init()
 	server=defaultServer;
 	port=8080;
 	//initialise using manual settings 
-	Serial.println("Initialising Ethernet...");
+	Serial.println(F("Initialising Ethernet..."));
 	Ethernet.begin(mac,ip,dnsip,gateway,subnet);
 	//display relevant information : serial
 	
-	displayInfo();
+	//displayInfo();
 
 }
 void wiznet::displayInfo(void)
 {
-	Serial.print("MAC : ");	serialPrintMAC(mac);
-	Serial.print("IP : ");	Serial.println(Ethernet.localIP());
-	Serial.print("DNS : ");	Serial.println(Ethernet.dnsServerIP());
-	Serial.print("GATEWAY : ");	Serial.println(Ethernet.gatewayIP());
-	Serial.print("SUBNET : ");	Serial.println(Ethernet.subnetMask());
+	Serial.print(F("MAC : "));	serialPrintMAC(mac);
+	Serial.print(F("IP : "));	Serial.println(Ethernet.localIP());
+	Serial.print(F("DNS : "));	Serial.println(Ethernet.dnsServerIP());
+	Serial.print(F("GATEWAY : "));	Serial.println(Ethernet.gatewayIP());
+	Serial.print(F("SUBNET : "));	Serial.println(Ethernet.subnetMask());
 }
 void wiznet::serialPrintMAC(byte mac[6])
 {
@@ -69,22 +69,6 @@ void wiznet::serialPrintMAC(byte mac[6])
 	Serial.println(mac[5],HEX);
 }
 
-void wiznet::setServer(IPAddress& s)
-{
-	server=s;
-}
-IPAddress wiznet::getServer(void)
-{
-	return server;
-}
-void wiznet::setPort(unsigned int p)
-{
-	port=p;
-}
-unsigned int wiznet::getPort(void)
-{
-	return port;
-}
 bool wiznet::checkWaitConnect(unsigned int timeoutSeconds)
 {
 	unsigned long time = millis();
@@ -92,13 +76,11 @@ bool wiznet::checkWaitConnect(unsigned int timeoutSeconds)
 	while(res!=1 && (	 (millis()-time) < timeoutSeconds*1000	) )	
 	{
 		res=client.connect( server,port);
-		Serial.print("**free MEMEORY :");
-		Serial.println(freeMemory(),DEC);
 	}
 	client.stop();
 	if(res==1)return true;	//function succeded in connnecting before  timeout
 	else return false;		//function failed to connect before timeout
-}
+}/*
 bool wiznet::startup(unsigned int timeoutSeconds)
 {
 
@@ -124,11 +106,10 @@ bool wiznet::startup(unsigned int timeoutSeconds)
 			{
 				if(client.available())
 				{
-					/*client.readBytesUntil(0x00,response,1024);*/
-					response=client.readString();
-					/*Serial.println("=-=-=-=-=-=-=-=-=-");
+					client.readBytesUntil(0x00,response,1024);
+					/ *Serial.println("=-=-=-=-=-=-=-=-=-");
 					Serial.println(response);
-					Serial.println("-=-=-=-=-=-=-=-=-=");*/
+					Serial.println("-=-=-=-=-=-=-=-=-=");* /
 					//response="NULL";
 				}
 			}
@@ -137,12 +118,12 @@ bool wiznet::startup(unsigned int timeoutSeconds)
 		}
 	}
 	client.stop();
-	setStartupSettings();
+	//setStartupSettings();
 	if(res==1)return true;	//function succeded in connnecting before  timeout
 	else return false;		//function failed to connect before timeout
 
-}
-
+}*/
+/*
 
 void wiznet::setStartupSettings()
 {
@@ -177,7 +158,7 @@ void wiznet::setStartupSettings()
 		Serial.print(F("date_TIME :"));Serial.println(_date_time);
 		timeManage.setDateTime_YmdHis(_date_time);
 	}
-}
+}*//*
 int wiznet::checkData(String method,String type,String uid,String devid, String time,String date,String lat,String lon)
 {
 	String data;
@@ -204,7 +185,7 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 		data=data+lat;
 		data=data+"&LON=";
 		data=data+lon;
-		/*Serial.println(data);
+		/ *Serial.println(data);
 		char buf[100];
 		for(int i=0;i<data.length();i++)
 		{
@@ -213,7 +194,7 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 			{
 				buf[100]=0;
 			}
-		}*/
+		}* /
 		client.print(F("GET /cas/check.php?"));
 		//client.print("&METHOD="+method+"&TYPE="+type+"&UID="+uid+"DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon);
 		client.print(data);
@@ -227,8 +208,94 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 			if(client.available())
 			{
 				
-				response=client.readString();
-				//client.readBytesUntil('\r',response,1024);
+				//response=client.readString();
+				client.readBytesUntil('\r',response,1024);
+				//response="NULL";
+				
+			}
+		}
+		client.stop();
+		client.flush();
+		return 1;
+	}
+	else
+	{
+		//unable to connect
+		//dataNotSent=data;
+		return -1;	//return -1  for communication error
+		
+	}
+}
+*/
+int  wiznet::processData()
+{
+	
+	Serial.println(F("######################"));
+	Serial.println(response);
+	//int res = response.indexOf(F("NOT FOUND"));
+	char * loc=strstr(response,"NOT FOUND");
+	Serial.println(freeMemory(),DEC);
+	if(loc==NULL)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+
+
+const  char string_check[] PROGMEM = "CHECK";
+const char string_add[] PROGMEM = "ADD";
+const  char string_delete[] PROGMEM = "DELETE";
+PGM_P string_methods[]=
+{
+	string_check,
+	string_add,
+	string_delete
+};
+
+int wiznet::checkData(	uint8_t method /*CHECK/REGISTER*/,
+				uid& userid,
+				uint16_t devid, /*DEVICE ID*/
+				uint32_t time,	/*TIME<HH:MM:SS>*/
+				uint32_t date,	/*DATE<DD:MM:YY>*/
+				uint32_t lat,		/*LATTITUDE<String>*/
+				uint32_t lon		/*LONGITUDE<String>*/
+)
+{
+	
+		char  data[120];
+	
+	sprintf_P(data,PSTR("METHOD=%s&TYPE=%s&UID=%s&DEVID=%d&TIME=%d&DATE=%d&LAT=%d&LON=%d")
+	
+	);
+	if(client.connect(server,port))
+	{
+		//if connected
+		//send get request with all flags
+		//data="METHOD="+method+"&TYPE="+type+"&UID="+uid+"&DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon;
+		
+		//"METHOD=";"&DEVID=";"&TYPE=";"&UID=";"&TIME=";"&DATE=";"&LAT=";"&LON=";
+		
+		
+		client.print(F("GET /cas/check.php?"));
+		
+		client.print(data);
+		client.println(F(" HTTP/1.1"));
+		client.print(F("Host: "));client.println(server);
+		client.println(F("Connection: close"));
+		client.println();	//empty line
+		
+		while(client.connected() )		
+		{
+			if(client.available())
+			{
+				
+				//response=client.readString();
+				client.readBytesUntil('\r',response,1024);
 				//response="NULL";
 				
 			}
@@ -246,26 +313,6 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 	}
 }
 
-int  wiznet::processData()
-{
-	
-	Serial.println(F("######################"));
-	Serial.println(response);
-	int res = response.indexOf(F("NOT FOUND"));
-	//char * loc=strstr(response,"NOT FOUND");
-	Serial.println(freeMemory(),DEC);
-	if(/*loc==NULL*/res>=0)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
-}
 
-String wiznet::getDataNotSent()
-{
-	return  "NULL";
-}
+
 #endif

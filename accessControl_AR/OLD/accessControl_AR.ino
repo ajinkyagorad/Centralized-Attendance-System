@@ -3,25 +3,18 @@
 #include <EEPROM.h>
 #include <Wire.h>
 //#include <SD.h>
-#include <GSM.h>
+//#include <GSM.h>
 #include <LiquidCrystal.h>
 #include <SPI.h>
 #include <Ethernet.h>
-#include <EthernetClient.h>
+//#include <EthernetClient.h>
 #include <DS1307.h>
 /*
  * accessControl_AR.ino
  *
  * Created: 5/8/2015 5:20:20 AM
  * Author: Ajinkya
- *NOTE:
-	while using SD card:
-		deselectEthernet ie make CS pin of EThernet high
-	and while using ethernet 
-		deselect SD card ie make CS pin of SD high
-	MACROS:
-		SDrelease() releases SD bus;
-		ETrelease() releases ETh bus
+
  */ 
 #include "wiznet.h"
 #include "time.h"
@@ -30,7 +23,7 @@
 #include "buzzer.h"
 //#include "memory.h"
 #include "devid.h"
-#include "GPS_NMEA.h"
+//#include "GPS_NMEA.h"
 #include "id.h"
 #include "RFID.h"
 #include "fingerprint.h"
@@ -40,11 +33,11 @@ wiznet ether;
 EthernetClient client;
 DS1307 clock;
 RGBLED led(5,6,7);
-buzzer buzz(11);
+buzzer buzz(8);
 //memory disk(4);		//chip select  for sd card
 timeClass timeManage;
 devClass dev;
-GPSClass gps;
+//GPSClass gps;
 fingerPrintClass finger(Serial1);
 idClass userID;
 RFIDClass rfid;
@@ -58,10 +51,10 @@ RFIDClass rfid;
 /*******************************************/
 unsigned long timeServerCheck;
 bool serverFailed;
-position location;
+//position location;
 String MODE;
 void setup()
-{
+{	 
 
 		
 	  /* add setup code here, setup code runs once when the processor starts */
@@ -79,23 +72,17 @@ void setup()
 	  Serial.print("free MEMEORY :");
 	  Serial.println(freeMemory(),DEC);
 	  ether.init();
-	  gps.init();
+	  //gps.init();
 	  clock.begin();
 	  lcd.begin(16,2);
-	  
-	// Serial.println("free Ram ini:"+freeMemory());
-	 /* for(int i=0;i<64;i++)Serial.write(EEPROM.read(i));*/
-	
-	  
 
 	  lcd.print("initialised");
 	  Serial.println("Initialised");
 	  lcd.home();lcd.print("connecting...");
 	  Serial.println("Waiting for connection..");
-	  Serial.print("**free MEMEORY :");
-	  Serial.println(freeMemory(),DEC);
 	  
-	  if(ether.startup(2))		//startup with timeout
+	  
+	  if(ether.checkWaitConnect(2))		//startup with timeout
 	  {
 		  Serial.print("**free MEMEORY :");
 		  Serial.println(freeMemory(),DEC);
@@ -109,20 +96,18 @@ void setup()
 		  Serial.print("**free MEMEORY :");
 		  Serial.println(freeMemory(),DEC);
 		  Serial.println("Error Connecting");
-		  Serial.println("Exiting...");
+		  
 		  lcd.home(); lcd.print("Error Connecting");
 		  serverFailed=true;
 		  //use default mode for checking
-		  dev.setDeviceMethod("CHECK");
+		  dev.deviceMethod=method_check;
 	  }
 	  
 	  
 	//  Serial.println("free Ram :"+freeMemory());
 	  
 	  
-	  Serial.print("free MEMEORY :");
-	  Serial.println(freeMemory(),DEC);
-	  timeServerCheck=millis();
+	   timeServerCheck=millis();
 	  
 }
 
@@ -133,13 +118,11 @@ void loop()
 		
 		
 		Serial.print("**free MEMORY :");
-		Serial.print(freeMemory(),DEC);
-		Serial.print(" TIME : ");
-		Serial.println(millis());
+		Serial.println(freeMemory(),DEC);
 		SDrelease();
 		userid.isValid=false;
 		userID.getID(userid);	//instead a function to get any ID and type
-	
+	//	Serial.println("free Ram :"+freeMemory());
 		gps.getLatLon(location);
 		if(userid.isValid==true)	// if a valid id
 		{
@@ -147,9 +130,9 @@ void loop()
 			
 			//following  with ethernet
 			//get date time
-			String  date,time;
-			timeManage.getDateTimeStr(date,time);
-			if(ether.checkData(dev.getDeviceMethod(),userid.type,userid.id,dev.getDeviceId(),time,date,location.lat,location.lon)>0)	//function to send data for checking/ receiving and look for its response
+			
+			//timeManage.getDateTimeStr(date,time);
+			if(ether.checkData(dev.deviceMethod,userid,dev.devid,0,0,0,0)>0)	//function to send data for checking/ receiving and look for its response
 			{
 				//process received data
 				//if data for checking : 

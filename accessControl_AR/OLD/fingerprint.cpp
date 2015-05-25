@@ -12,21 +12,26 @@
 
 void fingerPrintClass::_getID(uid & userid)
 {
-		userid.isValid=false;
 		
+		userid.isValid=false;
+		Serial.println(F("GETTING IMG"));
 		uint8_t p = getImage();
 		if (p != FINGERPRINT_OK)  return ;
+		Serial.println(F("FINGERPRINTOK"));
+		Serial.flush();
 		p = image2Tz();
 		if (p != FINGERPRINT_OK)  return ;
+		Serial.println(F("FINGERPRINTOK"));
+		Serial.flush();
 		p = fingerFastSearch();
 		if (p != FINGERPRINT_OK)  return ;
-		Serial.print("Finger ID");
-		Serial.println(fingerID);
-		userid.id="ID"+String(fingerID);
-		userid.isValid=true;
-		userid.type="FINGERPRINT";
+		Serial.println(F("FINGERPRINTOK"));
+		Serial.flush();
+		itoa(fingerID,userid.id,10);
 		//convert fingerID to userid at base 10;
+		Serial.println(userid.id);
 		
+	
 }
 	/*userid.type=F("FINGERPRINT");
 	
@@ -47,15 +52,16 @@ void fingerPrintClass::_getID(uid & userid)
 	{
 		userid.isValid=false;
 	}
-	
-	
 	*/
+	
+	
 	
 
 bool fingerPrintClass::init(void)
 {
 	begin(57600);
 	return verifyPassword();
+
 }
 
 
