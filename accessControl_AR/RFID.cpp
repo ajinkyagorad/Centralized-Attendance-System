@@ -23,7 +23,7 @@ void RFIDClass::_getID(uid& rfid)
 	
 	rfid.type="RFID";
 	Serial1.begin(9600);
-	Serial1.setTimeout(20);	//set  delay between timeout
+	Serial1.setTimeout(50);	//set  delay between timeout
 // 	int bytesRead=Serial1.readBytes(rfid.buf,12);
 // 	rfid.buf[13]=0;	//append 0 for string
 	rfid.id=Serial1.readString();
@@ -41,7 +41,7 @@ void RFIDClass::_getID(uid& rfid)
 		rfid.isValid=false;
 	}
 	
-	
+	Serial1.end();
 	
 }
 

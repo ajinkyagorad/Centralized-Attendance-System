@@ -39,17 +39,13 @@ void buzzer::notRegistered()
 	delay(200);
 	tone(pin,1000);
 	delay(200);
-	tone(pin,4000);
-	delay(200);
-	tone(pin,2000);
-	delay(200);
 	tone(pin,4000,200);
 	
 	
 }
 void buzzer::swipe()
 {
-	tone(pin,4000,800);
+	tone(pin,4000,500);
 }
 
 #endif /* BUZZER_CPP_ */

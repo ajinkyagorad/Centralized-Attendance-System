@@ -2,7 +2,7 @@
 #include <Adafruit_Fingerprint.h>
 #include <EEPROM.h>
 #include <Wire.h>
-//#include <SD.h>
+#include <SD.h>
 #include <GSM.h>
 #include <LiquidCrystal.h>
 #include <SPI.h>
@@ -137,10 +137,18 @@ void loop()
 		Serial.print(" TIME : ");
 		Serial.println(millis());
 		SDrelease();
+		gps.getLatLon(location);
 		userid.isValid=false;
 		userID.getID(userid);	//instead a function to get any ID and type
 	
-		gps.getLatLon(location);
+		
+		if(userid.id==F("NULL")&&userid.type==F("FINGERPRINT"))		//specifically for biometric
+		{
+				lcd.print("Not Registered :(");
+				led.notRegistered();
+				buzz.notRegistered();
+				userid.id="";
+		}
 		if(userid.isValid==true)	// if a valid id
 		{
 			buzz.swipe();		//beep buzzer for swipe/thumb successful impression
@@ -190,6 +198,7 @@ void loop()
 		}
 		else
 		{
+			
 			lcd.clear();
 			led.clear();
 			

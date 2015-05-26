@@ -186,34 +186,9 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 	{
 		//if connected
 		//send get request with all flags
-		//data="METHOD="+method+"&TYPE="+type+"&UID="+uid+"&DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon;
+		data="METHOD="+method+"&TYPE="+type+"&UID="+uid+"&DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon;
 		
-		data="METHOD=";
-		data=data+method;
-		data=data+"&DEVID=";
-		data=data+devid;
-		data=data+"&TYPE=";
-		data=data+type;
-		data=data+"&UID=";
-		data=data+uid;
-		data=data+"&TIME=";
-		data=data+time;
-		data=data+"&DATE=";
-		data=data+date;
-		data=data+"&LAT=";
-		data=data+lat;
-		data=data+"&LON=";
-		data=data+lon;
-		/*Serial.println(data);
-		char buf[100];
-		for(int i=0;i<data.length();i++)
-		{
-			buf[i]=data.charAt(i);
-			if(i>=100)
-			{
-				buf[100]=0;
-			}
-		}*/
+		
 		client.print(F("GET /cas/check.php?"));
 		//client.print("&METHOD="+method+"&TYPE="+type+"&UID="+uid+"DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon);
 		client.print(data);
@@ -226,7 +201,12 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 		{
 			if(client.available())
 			{
-				
+				String temp;
+				while(1)
+				{
+					temp=client.readStringUntil('\r');
+					if(temp.length()==1 && temp.charAt(0)=='\n')break;
+				}
 				response=client.readString();
 				//client.readBytesUntil('\r',response,1024);
 				//response="NULL";
@@ -248,20 +228,26 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 
 int  wiznet::processData()
 {
-	
+	int res;
 	Serial.println(F("######################"));
 	Serial.println(response);
-	int res = response.indexOf(F("NOT FOUND"));
+	//int res = response.indexOf(F("id_"));
 	//char * loc=strstr(response,"NOT FOUND");
 	Serial.println(freeMemory(),DEC);
-	if(/*loc==NULL*/res>=0)
+	if(response.indexOf("id_not_found")>=0)
 	{
-		return 1;
+		res= 0;
 	}
-	else
+	else if(response.indexOf("id_found")>=0)
 	{
-		return 0;
+		res= 1;
 	}
+	else 
+	{
+		res=-1;
+	}
+		return res;
+	
 }
 
 String wiznet::getDataNotSent()

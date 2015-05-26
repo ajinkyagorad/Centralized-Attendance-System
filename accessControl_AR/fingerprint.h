@@ -28,6 +28,7 @@ class fingerPrintClass:public Adafruit_Fingerprint{
 		bool remove(uid id);
 		//returns the user id
 		void _getID(uid& userid);
+		bool checkSensor(void);
 	};
 
 

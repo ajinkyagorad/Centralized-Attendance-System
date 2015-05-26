@@ -39,6 +39,7 @@ class idClass{
 	//	bool remove(uid);
 		void setType(String _type);
 		String getType(void);
+		void checkGetType(void);
 	};
 	
 

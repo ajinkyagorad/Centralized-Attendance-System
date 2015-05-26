@@ -16,11 +16,26 @@ idClass::idClass()
 {
 	pinType=29;
 }
-
+void idClass::checkGetType(void)
+{
+	
+		digitalWrite(pinType,LOW);
+		pinMode(pinType,INPUT);
+		int state=digitalRead(pinType);
+		if(state==HIGH)
+		{
+			idType="RFID";
+		}
+		else 
+		{
+			idType="FINGERPRINT";
+		}
+}
 bool idClass::init(String _type)
 {
 	setType(_type);
 	bool isSuccessful=false;
+	
 	if(idType=="RFID")
 	{
 		// no initialisation sequence
@@ -38,17 +53,15 @@ void idClass::getID(uid&  _id)
 {
 	
 	
-	digitalWrite(pinType,LOW);
-	pinMode(pinType,INPUT);
-	int state=digitalRead(pinType);
-	
-	if(state==LOW/*idType==F("RFID")*/)
+
+	checkGetType();
+	if(idType==F("RFID"))
 	{
 		rfid._getID(_id);
 		
 
 	}
-	else if (state ==HIGH/*idType==F("FINGERPRINT")*/)
+	else if (idType==F("FINGERPRINT"))
 	{
 		 finger._getID(_id);
 		

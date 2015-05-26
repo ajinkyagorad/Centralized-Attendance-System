@@ -94,7 +94,6 @@
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
   <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcc.compiler.optimization.UseShortCalls>True</avrgcc.compiler.optimization.UseShortCalls>
   <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
   <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
   <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
@@ -358,6 +357,7 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
+      <Value></Value>
       <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
       <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>
@@ -407,6 +407,7 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
+      <Value></Value>
       <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
       <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>

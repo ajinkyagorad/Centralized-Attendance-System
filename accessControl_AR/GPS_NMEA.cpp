@@ -26,6 +26,7 @@ bool GPSClass::update(unsigned long timeout_ms)
 	unsigned long time=millis();
 	String rxTemp;
 	char status;
+	Serial3.setTimeout(100);
 	while( millis()-time<timeout_ms)
 	{
 		

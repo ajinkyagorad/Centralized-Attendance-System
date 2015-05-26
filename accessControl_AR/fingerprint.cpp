@@ -12,45 +12,33 @@
 
 void fingerPrintClass::_getID(uid & userid)
 {
+		Serial1.begin(57600);
+		Serial1.setTimeout(50);
 		userid.isValid=false;
-		
-		uint8_t p = getImage();
+		userid.type="FINGERPRINT";
+		uint8_t p = getImage();Serial.println("getImage");
 		if (p != FINGERPRINT_OK)  return ;
-		p = image2Tz();
+		p = image2Tz();			Serial.println("image2Tz");
 		if (p != FINGERPRINT_OK)  return ;
-		p = fingerFastSearch();
-		if (p != FINGERPRINT_OK)  return ;
-		Serial.print("Finger ID");
+		p = fingerFastSearch();	Serial.println("fingerFastSearch");
+		if (p != FINGERPRINT_OK) 
+		{ 
+			userid.id="NULL";
+			return ;
+		}
+		Serial.print(F("Finger ID"));
 		Serial.println(fingerID);
 		userid.id="ID"+String(fingerID);
 		userid.isValid=true;
-		userid.type="FINGERPRINT";
-		//convert fingerID to userid at base 10;
+		
+		
 		
 }
-	/*userid.type=F("FINGERPRINT");
 	
-	Serial1.begin(9600);
-	
-	Serial1.setTimeout(100);
-	{
-		userid.id=Serial1.readStringUntil('*');
-	}
-	if(userid.id.indexOf("ID")>=0)
-	{
-		Serial.println("*****");
-		Serial.println(userid.id);
-		Serial.println("*****");
-		userid.isValid=true;
-	}
-	else
-	{
-		userid.isValid=false;
-	}
-	
-	
-	*/
-	
+bool fingerPrintClass::checkSensor(void)
+{
+	return init();
+}
 
 bool fingerPrintClass::init(void)
 {
