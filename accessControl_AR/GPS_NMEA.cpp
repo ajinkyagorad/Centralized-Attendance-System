@@ -9,24 +9,32 @@
 #define GPS_NMEA_CPP_
 
 #include "GPS_NMEA.h"
-
+//default  constructor
+//does nothing
 GPSClass::GPSClass()
 {
 	
 }
+//initialize GPS <if any>
+//RETURN : true always
+//<can be modified for specific GPS sensor >
+
 bool GPSClass::init()
 {
 	//if at all any initialisation sequence
 	return true;
 }
+//updates the lastLatLon 
+// INPUT : timeout <default to 200 ms> ( NOTE:this timeout is for the function to end)
+// OUTPUT : true on success/ false otherwise
 bool GPSClass::update(unsigned long timeout_ms)
 {
-	Serial3.begin(9600);
-	Serial3.flush();
-	unsigned long time=millis();
-	String rxTemp;
-	char status;
-	Serial3.setTimeout(100);
+	Serial3.begin(9600);			//initialise link with bluetooth
+	Serial3.flush();				// remove any data in transmit buffer has no effect on reception
+	unsigned long time=millis();	// for checking timeout , get reference time
+	String rxTemp;					//var :string store temporary received data
+	char status;					//var :store status of gps <A/V> : active / inactive
+	Serial3.setTimeout(100);		//set timeout for serial receiving ( by default it is 1000ms )
 	while( millis()-time<timeout_ms)
 	{
 		
@@ -93,6 +101,10 @@ bool GPSClass::update(unsigned long timeout_ms)
 	Serial3.end();
 	
 }
+//get lattitude and longitude
+// INPUT :   timeout in milliseconds
+//			 referenced position 'pos' 
+// RESULT : modified position with lattitude, longitude and validness
 void GPSClass::getLatLon(position & pos, unsigned long timeout_ms)
 {
 		update(timeout_ms);
@@ -100,7 +112,10 @@ void GPSClass::getLatLon(position & pos, unsigned long timeout_ms)
 		
 }
 
-void GPSClass::getLastLatLon(position pos)
+//get last updated lattitude and longitude 
+//INPUT : referenced position 'pos'
+//RESULT : modified pos
+void GPSClass::getLastLatLon(position& pos)
 {
 	pos=lastPosition;
 }

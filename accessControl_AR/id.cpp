@@ -11,11 +11,21 @@
 
 #include "id.h"
 
-
 idClass::idClass()
 {
-	pinType=29;
+	//null constructor
 }
+//INPUT : _pinType  -- pin number of deciding type of sensor
+idClass::idClass(int _pinType)
+{
+	pinType=_pinType;
+}
+//automatically set the type
+//checks the PIN with pinType and depending
+//on whether the pin is high or low  
+//decides the sensor connected
+//		--> HIGH => RFID
+//		--> LOW  => FINGERPRINT
 void idClass::checkGetType(void)
 {
 	
@@ -31,9 +41,11 @@ void idClass::checkGetType(void)
 			idType="FINGERPRINT";
 		}
 }
-bool idClass::init(String _type)
+//initialize respective  sensor
+//OUTPUT : true on success /false on failure
+bool idClass::init(void)
 {
-	setType(_type);
+	checkGetType();
 	bool isSuccessful=false;
 	
 	if(idType=="RFID")
@@ -49,6 +61,9 @@ bool idClass::init(String _type)
 	return isSuccessful;
 }
 
+//get id <UID> with  type
+//INPUT : referenced uid _id
+//RESULT : modified uid with respective parameters
 void idClass::getID(uid&  _id)
 {
 	
@@ -73,10 +88,8 @@ void idClass::getID(uid&  _id)
 	
 }
 
-void idClass::setType(String _type)
-{
-	idType= _type;
-}
+//getter for idType
+//RETURN : idType
 String idClass::getType()
 {
 	return idType;

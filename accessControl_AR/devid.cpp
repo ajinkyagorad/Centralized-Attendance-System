@@ -22,7 +22,8 @@ void devClass::setDeviceId(String id)
 	EEPROM.write(6,0x00);
 	
 }
-
+//get device id from EEPROM
+//OUTPUT : string with device id stored on eeprom
 String devClass::getDeviceId(void)
 {
 	String data="XXXXXX";
@@ -33,7 +34,7 @@ String devClass::getDeviceId(void)
 	}
 	
 	
-	if(data.indexOf("ID")==0)
+	if(data.indexOf("ID")==0)			//to check, id is always stored with IDXXXX
 	{
 		//true : valid string
 		return data.substring(2,6);		//return only the numberstring
@@ -44,11 +45,17 @@ String devClass::getDeviceId(void)
 		return "0000";		//return  default value
 	}
 }
+
+//deletes the id from the EEPROM
+//clears the region of EEPROM where id is residing
 void  devClass::deleteID(void)
 {
 	for(int i=0;i<=6;i++)		//also include null character
 	EEPROM.write(i,0xFF);		//delete  all data from 0 to 6 => 7 cycles
 }
+
+//following are setter and getter functions for device method and lcd default text
+//**//
 void devClass::setDeviceMethod(String method)
 {
 	status.deviceMethod=method;
@@ -65,6 +72,11 @@ String devClass::getLcdDefaultText()
 {
 	return  status.lcdDefaultText;
 }
+
+//**//
+
+//prints device status to serial monitor
+//debugging purpose
 void devClass::printDevStatus()
 {
 	Serial.println("!----Device Status------!");

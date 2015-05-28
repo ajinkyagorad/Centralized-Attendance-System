@@ -7,6 +7,8 @@
 #ifndef RGBLED_CPP_
 #define RGBLED_CPP_
 #include "RGBled.h"
+
+//initialise led pins using construntor
 RGBLED::RGBLED(int pinR,int pinG,int pinB)
 {
 	pinRed=pinR;
@@ -17,6 +19,11 @@ RGBLED::RGBLED(int pinR,int pinG,int pinB)
 	pinMode(pinBlue,OUTPUT);
 	
 }
+
+//set red,green,blue content
+//  range : 0-255
+//INPUT : intensity for red,green,blue in range
+//RESULT : PWM output of specific duty cycle
 void RGBLED::set(int   r, int g, int b)
 {
 	analogWrite(pinRed,r);

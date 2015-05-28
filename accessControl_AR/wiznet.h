@@ -13,28 +13,38 @@
 #include "devid.h"
 #include "time.h"
 
+//object for client
 extern  EthernetClient client;
-#define MAXLINES 20
+
 class wiznet{
 	
-	IPAddress server;
-	unsigned int port;
-	String response;
+	IPAddress server;	//IP address server 	
+	unsigned int port;	//port of the server
+	String response;	// to store the response from the server <NOTE : use buffer for memory constraints>// dynamic memalloc,,server to ensure
 	//char response[1024];
 	
 	public:
-		
+		//initialise the ethernet
 		bool init();
+		//startup routine
 		bool startup(unsigned int timeoutSeconds);
+		// waits till connect
 		bool checkWaitConnect(unsigned int timeoutSeconds);
+		//debug :print mac
 		void serialPrintMAC(byte mac[6]);
+		//debug : print  info
 		void displayInfo(void);
+		//set server
 		void setServer(IPAddress &s);
+		//get server
 		IPAddress getServer(void);
+		//set Port
 		void setPort(unsigned int p);
+		//get port
 		unsigned int getPort(void);
+		//process data
 		int processData();
-		String getDataNotSent();
+		
 		/*following  sets the startup settings from the server's response*/
 		void setStartupSettings();
 		/*
@@ -71,7 +81,7 @@ class wiznet{
 						String lon		/*LONGITUDE<String>*/
 						);
 		
-		//one more function to send stored data
+		
 };
 
 
