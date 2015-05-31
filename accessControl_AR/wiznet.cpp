@@ -25,7 +25,11 @@ IPAddress ip(10,3,192,177);
 IPAddress dnsip(10,200,1,11);
 IPAddress gateway(10,3,200,250);
 IPAddress subnet(255,255,224,0);
-
+/*startup configuration file*/
+char startupFile[]="/cas/startup.php";
+/*checking file*/
+//link in server's directory about the PHP script
+char checkFile[]="/cas/check.php";
 //ethernet client
 ///EthernetClient client;
 
@@ -129,7 +133,7 @@ bool wiznet::startup(unsigned int timeoutSeconds)
 		if(res==1)
 		{
 			//send request to client
-			client.print("GET /cas/startup.php?DEVID=");client.print(dev.getDeviceId());client.println(" HTTP/1.1");
+			client.print("GET ");client.print(startupFile);client.print("?DEVID=");client.print(dev.getDeviceId());client.println(" HTTP/1.1");
 			client.print("Host: ");client.println(server);
 			client.println("Connection: Close");		//connection to keep close
 			client.println();
@@ -216,7 +220,7 @@ int wiznet::checkData(String method,String type,String uid,String devid, String 
 		data="METHOD="+method+"&TYPE="+type+"&UID="+uid+"&DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon;
 		
 		
-		client.print(F("GET /cas/check.php?"));
+		client.print(F("GET "));client.print(checkFile);client.print(F("?"));
 		//client.print(F("GET /check.php?"));;
 		//client.print("&METHOD="+method+"&TYPE="+type+"&UID="+uid+"DEVID="+devid+"&TIME="+time+"&DATE="+date+"&LAT="+lat+"&LON="+lon);
 		client.print(data);

@@ -23,7 +23,7 @@ RGBLED::RGBLED(int pinR,int pinG,int pinB)
 //set red,green,blue content
 //  range : 0-255
 //INPUT : intensity for red,green,blue in range
-//RESULT : PWM output of specific duty cycle
+//RESULT : PWM output of specific duty cycle on respective PWM Pins
 void RGBLED::set(int   r, int g, int b)
 {
 	analogWrite(pinRed,r);

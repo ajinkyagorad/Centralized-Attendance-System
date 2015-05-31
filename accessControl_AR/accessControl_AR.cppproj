@@ -76,8 +76,6 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value>
-      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value>
-      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/SD/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/SD/src</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
@@ -128,8 +126,6 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value>
-      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value>
-      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/SD/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/SD/src</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
@@ -159,7 +155,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;../../accessControl_AR;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Ajinkya/Documents/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Program Files (x86)/Arduino/libraries/GSM/src;C:/Program Files (x86)/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;{runtime.tools.avr-gcc.path}/avr/include/;{runtime.tools.avr-gcc.path}//avr/include/avr/;{runtime.tools.avr-gcc.path}/lib/gcc/avr/4.8.1/include;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/SD/src;C:/Program Files (x86)/Arduino/libraries/SD/src/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;../../accessControl_AR;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Ajinkya/Documents/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Program Files (x86)/Arduino/libraries/GSM/src;C:/Program Files (x86)/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;{runtime.tools.avr-gcc.path}/avr/include/;{runtime.tools.avr-gcc.path}//avr/include/avr/;{runtime.tools.avr-gcc.path}/lib/gcc/avr/4.8.1/include;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/SD/src;C:/Program Files (x86)/Arduino/libraries/SD/src/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM-GPRS-GPS-Shield-GSMSHIELD;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM-GPRS-GPS-Shield-GSMSHIELD/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM_Shield;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM_Shield/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>mega_atmega2560</arduino.board.name>
@@ -336,7 +332,7 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
         <visualmicro.application.name>arduino16x</visualmicro.application.name>
         <visualmicro.package.name>arduino</visualmicro.package.name>
         <visualmicro.platform.name>avr</visualmicro.platform.name>
-        <arduino.upload.port>COM17</arduino.upload.port>
+        <arduino.upload.port>COM22</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -378,8 +374,6 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value>
-      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value>
-      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/SD/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/SD/src</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
@@ -430,8 +424,6 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src</Value>
-      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility</Value>
-      <Value>C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/SD/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries/SD/src</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
@@ -461,7 +453,7 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;../../accessControl_AR;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Ajinkya/Documents/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Program Files (x86)/Arduino/libraries/GSM/src;C:/Program Files (x86)/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;{runtime.tools.avr-gcc.path}/avr/include/;{runtime.tools.avr-gcc.path}//avr/include/avr/;{runtime.tools.avr-gcc.path}/lib/gcc/avr/4.8.1/include;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/SD/src;C:/Program Files (x86)/Arduino/libraries/SD/src/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;../../accessControl_AR;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Ajinkya/Documents/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Program Files (x86)/Arduino/libraries/GSM/src;C:/Program Files (x86)/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src;C:/Program Files (x86)/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;{runtime.tools.avr-gcc.path}/avr/include/;{runtime.tools.avr-gcc.path}//avr/include/avr/;{runtime.tools.avr-gcc.path}/lib/gcc/avr/4.8.1/include;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM/src/utility;C:/Program Files (x86)/Arduino/libraries/SD/src;C:/Program Files (x86)/Arduino/libraries/SD/src/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint_Sensor/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev;C:/Users/Ajinkya/Documents/Arduino/libraries/I2Cdev/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307;C:/Users/Ajinkya/Documents/Arduino/libraries/DS1307/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint;C:/Users/Ajinkya/Documents/Arduino/libraries/Adafruit_Fingerprint/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree;C:/Users/Ajinkya/Documents/Arduino/libraries/MemoryFree/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM-GPRS-GPS-Shield-GSMSHIELD;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM-GPRS-GPS-Shield-GSMSHIELD/utility;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM_Shield;C:/Users/Ajinkya/Documents/Arduino/libraries/GSM_Shield/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>mega_atmega2560</arduino.board.name>
@@ -638,7 +630,7 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
         <visualmicro.application.name>arduino16x</visualmicro.application.name>
         <visualmicro.package.name>arduino</visualmicro.package.name>
         <visualmicro.platform.name>avr</visualmicro.platform.name>
-        <arduino.upload.port>COM17</arduino.upload.port>
+        <arduino.upload.port>COM22</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
     <UsesExternalMakeFile>False</UsesExternalMakeFile>
@@ -995,6 +987,82 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\DS1307\DS1307.h</Link>
     </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\call.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\call.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\call.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\call.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\gps.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\gps.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\gps.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\gps.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\GSM.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\GSM.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\GSM.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\GSM.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\HWSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\HWSerial.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\HWSerial.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\HWSerial.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\inetGSM.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\inetGSM.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\inetGSM.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\inetGSM.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\LOG.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\LOG.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\LOG.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\LOG.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\SIM900.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\SIM900.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\SIM900.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\SIM900.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\sms.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\sms.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\sms.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\sms.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\Streaming.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\Streaming.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\WideTextFinder.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\WideTextFinder.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\WideTextFinder.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\WideTextFinder.h</Link>
+    </Compile>
     <Compile Include="..\..\..\Arduino\libraries\GSM\src\GSM.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\GSM\src\GSM.h</Link>
@@ -1267,6 +1335,22 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\GSM\src\GSM3VoiceCallService.h</Link>
     </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM_Shield\GSM_Shield.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM_Shield\GSM_Shield.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM_Shield\GSM_Shield.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM_Shield\GSM_Shield.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM_Shield\NewSoftSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM_Shield\NewSoftSerial.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Arduino\libraries\GSM_Shield\NewSoftSerial.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\GSM_Shield\NewSoftSerial.h</Link>
+    </Compile>
     <Compile Include="..\..\..\Arduino\libraries\MemoryFree\MemoryFree.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\MemoryFree\MemoryFree.cpp</Link>
@@ -1359,8 +1443,10 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
     <Folder Include="src\sketch-api-readonly\libraries\Ethernet\" />
     <Folder Include="src\sketch-api-readonly\libraries\Ethernet\src\" />
     <Folder Include="src\sketch-api-readonly\libraries\Ethernet\src\utility\" />
+    <Folder Include="src\sketch-api-readonly\libraries\GSM-GPRS-GPS-Shield-GSMSHIELD\" />
     <Folder Include="src\sketch-api-readonly\libraries\GSM\" />
     <Folder Include="src\sketch-api-readonly\libraries\GSM\src\" />
+    <Folder Include="src\sketch-api-readonly\libraries\GSM_Shield\" />
     <Folder Include="src\sketch-api-readonly\libraries\LiquidCrystal\" />
     <Folder Include="src\sketch-api-readonly\libraries\LiquidCrystal\src\" />
     <Folder Include="src\sketch-api-readonly\libraries\MemoryFree\" />
