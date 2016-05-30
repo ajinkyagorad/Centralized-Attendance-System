@@ -15,6 +15,7 @@
   *   BUZZER
   *   RFID TAGS
   *   RTC (DS1307) TINY RTC MODULE
+
 ###Using  following softwares:
   * Using OS as Windows 8.1
   * AtmelStudio with visual micro plugin
