@@ -2,8 +2,7 @@
 ######ArduinoMEGA
 
 ###Prototype Videos
-[![Video 1](http://img.youtube.com/vi/cUeR4WV6N3Y/0.jpg)](http://www.youtube.com/watch?v=cUeR4WV6N3Y)
-[![Video 1](http://img.youtube.com/vi/yT9sfJU_AW4/0.jpg)](http://www.youtube.com/watch?v=yT9sfJU_AW4)
+[![Video 1](http://img.youtube.com/vi/cUeR4WV6N3Y/0.jpg)](http://www.youtube.com/watch?v=cUeR4WV6N3Y)[![Video 1](http://img.youtube.com/vi/yT9sfJU_AW4/0.jpg)](http://www.youtube.com/watch?v=yT9sfJU_AW4)
 
 ###Using  following Modules : 
   Arduino  Mega
